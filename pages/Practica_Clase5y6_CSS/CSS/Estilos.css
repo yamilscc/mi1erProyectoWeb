@@ -1,0 +1,60 @@
+/*3ra forma de incorporar CSS: CSS Externo*/
+footer{
+    color: orangered; 
+    background-color: lightblue;
+    font-size: 10px;
+}
+
+
+/* SELECTOR UNIVERSAL (*): selecciona todos los elementos del doc HTML*/
+*{
+    color: white;
+    background-color: black;
+    font-size: 25;
+    font-family: Arial; /*Cambia el tipo de letra*/
+    margin: 50 px; /*Establece el margen para los 4 lados*/
+    padding: 5 px; /*Establece el espacio de relleno*/
+}
+
+/*SELECTOR DE ETIQUETA O TIPO (<tag>): para una etiqueta especifica*/
+header{
+    color: black;
+    background-color: white;
+    font-size: 50;
+}
+
+h3{
+    font-family: 'Times New Roman';
+    font-size: 40;
+    color: chartreuse;
+    background-color: navy;
+}
+
+/*SELECTOR DE CLASE(.selector): se aplica con un PUNTO(.) seguido del nombre que le asignamos al selector por medio del atributo CLASS en la etiqueta (por ejemplo: div, h1, p, etc)*/
+.ContenidoAdicional{
+    background-color: white;
+    color: black;
+}
+
+
+.ContenidoAdicional2{
+    background-color: green;
+}
+
+.SeccionSpan{
+    color: red;
+    background-color: aqua;
+    display: inline;
+}
+
+/*SELECTOR DE IDENTIFICADOR - ID (#selector): Se aplica con un NUMERAL(#) en CSS, y en HTML, se hace la referencia al selector con el atributo ID en la etiqueta*/
+/*Con display: inline el span no atiende a la propiedades de alto (height) y
+ancho (width) ya que se adaptará al tamaño del contenido. Cambiando a display:
+inline-block se permiten estas propiedades, porque se comporta como un div.
+Se puede hacer que un span se comporte como un div si en CSS agrego display:
+block.*/
+#div3{
+    background-color: yellow;
+    color: black;
+    display: block;
+}

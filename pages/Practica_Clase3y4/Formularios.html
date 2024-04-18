@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/A380.webp">
+    <title>Formularios - Clase 4</title>
+
+    <!--Es para acomodar los inputs asi quedan uno debajo del otro-->
+    <style>
+        input{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Formulario</h1>
+    <p>Para poder iniciar su carrera como piloto, complete el siguiente formulario y su tramite estará formalmente en curso:</p>
+
+    <form method="GET" action="">
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="Nombre">Nombre</label>
+            <input id="Nombre" type="text" name="name" placeholder="Ingresu su nombre" maxlength="30" required>
+
+            <label for="Apellido">Apellido</label>
+            <input id="Apellido" type="text" name="surname" placeholder="Ingrese su apellido" maxlength="30">
+
+            <label for="Nacimiento">Fecha de nacimiento</label>
+            <input id="Nacimiento" name="date of birth" type="date">
+
+            <label for="DNI">DNI</label>
+            <input id="DNI" name="DNI" type="number" placeholder="Ingresu DNI sin puntos">
+
+            <label for="CUIL/CUIT">CUIL/CUIT</label>
+            <input id="CUIL/CUIT" name="CUIL/CUIT" type="number" placeholder="Ingrese su CUIL o CUIL">
+
+            <label for="Email">Email</label>
+            <input id="Email" name="mail" type="email" placeholder="ejemplo@gmail.com">
+
+            <label for="Teléfono">Teléfono/Celular</label>
+            <input id="Teléfono" name="tel" type="tel" placeholder="Ingrese su número de tel/cel">
+
+            <label for="Retrato">Imágen de perfil</label>
+            <input id="Retrato" name="profile pic" type="file" size="25">
+
+            <fieldset>
+                <legend>Datos Académicos</legend>
+
+                <h2>Indique su nivel de estudios actual</h2>
+
+                <select name="level"> <!--Entiendo que el caso de select y option, no necesito poner el campo value ya que toma como tal el texto entre las etiquetas-->
+                    
+                    <option>Secundario</option>
+                    <option>Terciario</option>
+                    <option>Universitario</option>
+                    <option>Posgrado/Master</option>
+
+                </select>
+
+            </fieldset>
+
+         </fieldset>
+
+        <h2>Ingrese sus datos de CAD</h2>
+
+        <fieldset>
+            <legend>Datos de acceso</legend>
+        
+            <label for="Usuario">Usuario</label>
+            <input id="Usuario" name="user" type="text" placeholder="Ingrese su usuario CAD">
+
+            <label for="Contraseña">Contraseña</label>
+            <input id="Contraseña" name="password" type="password" placeholder="Ingresu su contraseña">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de cursada</legend>
+            
+            <h2>Seleccione el/los modelo/s de avión con el cual le gustaría tomar el curso de PPA</h2>
+
+            <label for="Tecnam">Tecnam</label>
+            <input id="Tecnam" name="Modelo" value="Tecnam" type="checkbox">
+
+            <label for="C150">C150</label>
+            <input id="C150" name="Modelo" value="C150" type="checkbox">
+
+            <label for="C152">C152</label>
+            <input id="C152" name="Modelo" value="C152" type="checkbox">
+
+            <label for="Piper PA11">Piper PA11</label>
+            <input id="Piper PA11" name="Modelo" value="Piper PA11" type="checkbox">
+
+            <h2>Seleccione el horario en el que tomará clases de vuelo</h2>
+            
+            <label for="Mañana">Mañana</label>
+            <input id="Mañana" name="Turno" value="Mañana" type="radio">
+
+            <label for="Tarde">Tarde</label>
+            <input id="Tarde" name="Turno" value="Tarde" type="radio">
+
+            <label for="Noche">Noche</label>
+            <input id="Noche" name="Turno" value="Noche" type="radio">
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Acciones</legend>
+
+            <input type="reset" value="Limpiar campos">
+            <input type="submit" value="Enviar formulario">
+        
+        </fieldset>
+
+
+    </form>
+</body>
+</html>

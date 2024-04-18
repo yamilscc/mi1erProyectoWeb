@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    /*border: 1px blue solid;*/
+}
+
+header{
+    background-color: rgb(230, 92, 92);
+    color: white;
+    font-size: 20px;
+}
+
+main {
+    margin-left: 0px;
+}
+
+nav {
+    color: blue;
+    font-size: 75%;
+
+}
+
+.menuOpciones {
+    display: inline-block;
+    border: 2px green solid;
+    width: 200px;
+    background-color: aqua;
+}
+
+body {
+    background-color: yellowgreen;
+}
+
+section {
+    background-color: yellow;
+}
+
+aside {
+   /* margin-left: 92%; NO QUEDA BIEN, cómo hago que la foto quede del lado derecho?*/
+}
+
+.Titulo{
+    width: 550px;
+    background-color: blueviolet;
+}
+
+#CTZSpan {
+    background-color: orange;
+}
+
+footer {
+    background-color: grey;
+    height: 100 px;
+    color: white;
+}
+
+.Cierre {
+    height: 100px;
+    background-color: black;
+    color: white;
+}

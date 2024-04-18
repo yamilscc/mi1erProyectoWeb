@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/Favicon_a380.png">
+    <title>Multimedia y Tablas - Clase 3</title>
+
+    <!--El código a continuación es para darle formato a las tablas que se muestran en la ultima sección de este archivo HTML-->
+    <style>
+        table,tr,th,td{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Multimedia y Tablas - Clase 3</h1>
+    
+    <h2>Imágenes</h2>
+    <img src="../../img/Avion_Volando.jpg" alt="Avion Volando">
+
+    <h2>Imágen con atributos para cambiar su alto y ancho</h2>
+    <img src="../../img/A380.webp" alt="Avion Volando" height="200" width="300">
+
+    <h2>Imágen con hipervinculo/enlace</h2>
+    <p>Solo haga click en la imágen a continuación para obtener información detallada sobre el Airbus A380.</p>
+    <a href="https://www.youtube.com/watch?v=21S16HXToT4" target="_blank" title="Presione aquí para ser redireccionado al video"><img src="../../img/A380.webp" alt="Airbus A380" height="300" width="450"></a>
+
+    <h2>Audio - 1ra forma de implementarlo</h2>
+    <audio src="../../audio/a380_pronounciation.wav" controls></audio>
+
+    <h2>Audio - 2da forma de implementarlo</h2>
+        <!--Esta 2da manera es útil ya que el buscador toma, de todas las fuente de audio, la 1ra con la cual sea compatible. A su vez, si ninguna es compatible, se muestra el texto escrito dentro del bloque "audio"-->
+        <!--Respecto al atributo "type", este es opcional, pero se recomienda que se incluya, ya que contienen MIME types de los archivos de audio y los navegadores pueden leerlos y omitir inmediatamente los audios que no tienen. Si no estan incluidos, los navegadores cargarán e intentarán reproducir cada archivo hasta que encuentren uno que funcione, lo que llevará aún más tiempo y recursos.-->
+    <audio controls>
+        <source src="../../audio/a380_pronounciation.wav" type="audio/wav">
+        <source src="../../audio/a380_pronounciation2.mp3" type="audio/wav">
+        Su navegador no soporta la etiqueta "audio".
+    </audio>
+
+    <h2>Video - <i>(No se trata de un iframe)</i></h2>
+    <!--El atributo "poster" se utiliza para mostrar una imágen a modo de presentación del video-->
+    <video  height="300" width="600" poster="https://static.vecteezy.com/system/resources/previews/020/853/711/non_2x/illustration-of-airplane-aircraft-airplane-drawing-vector.jpg" controls>
+        <source src="../../video/A380_takeoff.mp4" type="video/mp4">
+        Su navegador no soporta la etiqueta "video".
+    </video>
+
+    <h2>Iframes</h2>
+
+        <!--Recordar que el iframe de maps lo encuentro en la sección "Compartir"-->    
+        <h3>Ubicación Aerodromo CUA</h3> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.126264917803!2d-58.508791924244996!3d-34.72721156403064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccefdce72df39%3A0xcc34e9d9a30d2c39!2sCUA!5e0!3m2!1ses-419!2sar!4v1710732259071!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+        
+        <!--Recordar que el iframe de youtube lo encuentro haciendo click derecho en el video y copiando el "código de inserción"-->
+        <h3>Iframe que vincula mi archivo html "index"</h3>
+        <iframe src="../../index.html" height="400" width="600" scrolling="yes" frameborder="0"></iframe>
+
+        <h3>Iframe a un video de youtube - Boeing 787 Dreamliner</h3>
+        <iframe width="937" height="527" src="https://www.youtube.com/embed/rhv_IWwot-k" title="Boeing 787: la leyenda del Dreamliner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h2><i><u><br>TABLAS</u></i></h2>
+        <h3><mark>Tabla Común - Listado de aviones</mark></h3>
+        <table>
+            <tr>
+                <th>Fabricante</th>
+                <th>Modelo</th>
+                <th>Cantidad de Pasajeros</th>
+                <th>Alcance</th>
+            </tr>
+
+            <tr>
+                <td>Airbus</td>
+                <td>A380</td>
+                <td>519</td>
+                <td>15200 Km</td>
+            </tr>
+
+            <tr>
+                <td>Airbus</td>
+                <td>A319</td>
+                <td>156</td>
+                <td>7200 Km</td>
+            </tr>
+
+            <tr>
+                <td>Boeing</td>
+                <td>B737</td>
+                <td>215</td>
+                <td>9955 Km</td>
+            </tr>
+        </table>
+
+        <h3><mark>Tablas con filas y columnas combinadas</mark></h3>
+        <table>
+            <tr>
+                <th>Fabricante</th>
+                <th>Modelo</th>
+                <th>Cantidad de Pasajeros</th>
+                <th>Alcance</th>
+            </tr>
+
+            <tr>
+                <td rowspan="2">Airbus</td>
+                <td>A380</td>
+                <td>519</td>
+                <td>15200 Km</td>
+            </tr>
+
+            <tr>
+                <td>A319</td>
+                <td>156</td>
+                <td>7200 Km</td>
+            </tr>
+
+            <tr>
+                <td>Boeing</td>
+                <td colspan="2">B737</td>
+                <td>9955 Km</td>
+            </tr>
+        </table>
+
+    
+
+</body>
+</html>

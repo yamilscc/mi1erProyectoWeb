@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 1ra Parte - Clase 5</title>
+
+    <!--3ra forma de incorporar CSS: CSS Externo (Aquí linkeo mi archivo HTML con mi archivo CSS)-->
+    <link rel="stylesheet" href="CSS/Estilos.css">
+
+    <!--2da forma de incorporar CSS: CSS Interno (afecta a todas la etiquetas indicadas en el bloque. Opción menos recomendable)--->
+    <style>
+        
+        h2{
+            color: lightblue; background-color: purple;
+        }
+        p{
+            color: yellow; background-color: grey;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    
+    <header>
+        <!--1ra forma de incorporar CSS: En Línea (afecta únicamente a la etiqueta en la cual se utiliza el atributo style. Opción no recomendable)-->
+        <h1 style="color: greenyellow; background-color: red;">CSS 1ra Parte - Clase 5</h1>
+    </header>
+
+    <main>
+       
+       <section>
+            <h2>Conceptos básicos</h2>
+            <p> 
+                <u>Altura:</u> Es la distancia entre el avión y el terreno. <br>
+                <u>Altitud:</u> Es la distancia entre el avión y el nivel medio del mar (MSL - Mean Sea Level). <br>
+                <u>Elevación:</u> Indica cuan alto es el terreno respecto al MSL.
+        </p>
+        </section>
+
+        <section>
+            <h2>Diferentes modos de medir la ubicación "vertical" del avión</h2>
+            <p>
+                <b>QNE</b><br>
+                <b>QNH</b><br>
+                <b>QFE</b><br>
+            </p>
+        </section>
+
+        <section>
+            <h2>Selectores</h2>
+            <article><h3>Artículo 1 con Selector de Etiqueta</h3></article>
+            <!--El atributo HIDDEN evita que el elemento y sus descendientes se muestren en el navegador. Cualquier control de formulario o de script dentro de la sección hidden será ejecutado, aunque no se muestra al usuario-->
+            <article hidden><h3>Artículo 2 Selector de Etiqueta</h3></article>
+            <article><h3>Artículo 3 Selector de Etiqueta</h3></article>
+        </section>
+        
+        <section>
+            <!--DIV(división): Es un elemento en bloque. Sirve para crear secciones o agrupar contenidos. Crea una caja, que puede contener texto y/u otras etiquetas, que se separa de la caja anterior con un salto a la línea siguiente.-->
+            <div id="div1" class="ContenidoAdicional">
+                1) Primera sección "div" donde utilizo Selector de Clase.
+            </div>
+
+            <div id="div2" class="ContenidoAdicional2">
+                2) Segunda sección "div" donde utilizo Selector de Clase.
+            </div>
+
+            <div id="div3">
+                3) Tercera sección "div" donde utilizo Selector de ID
+            </div>
+
+            <!--SPAN(abarcar): Es un elemento en linea. Sirve para aplicar estilo al texto o agrupar elementos uno a continuación del otro en la misma línea.-->
+            <span class="SeccionSpan">1) Sección 1 "Span"</span>
+            <span class="SeccionSpan">2) Sección 2 "Span"</span>
+        </section>
+
+        <section>
+
+            <!--El atributo DRAGGABLE indica si el elemento es arrastrable-->
+            <div class="ContenidoAdicional" translate="yes" draggable="true">
+                This is a text that should be translated.
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>CSS 2024</footer>
+    
+</body>
+</html>
